@@ -43,7 +43,7 @@ public class SendEmail {
                         message.addRecipients(Message.RecipientType.CC,InternetAddress.parse("swetha91@uw.edu"));
                         message.addRecipients(Message.RecipientType.CC,InternetAddress.parse("abirami@uw.edu"));
                         message.setSubject("Alert: Anomaly Processes Found in the Client Machine");
-			message.setText(msg + "\nThanks for using the tools\n");
+			message.setText(msg + "\nThanks for using the tool\n");
 			Transport.send(message);
 
 			System.out.println("Done");
