@@ -3,13 +3,15 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package process_anomaly_alerter;
+package process_anomaly_alerter.Log_Collection;
 
 import java.util.logging.Logger;
 
 /**
  *
  * @author naval_
+ * This component take care of functionality of log collection and passing it into various 
+ * Data store
  */
 public class Log_Collector {
 
