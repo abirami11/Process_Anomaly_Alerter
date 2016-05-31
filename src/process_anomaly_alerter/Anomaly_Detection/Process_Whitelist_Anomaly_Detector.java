@@ -67,8 +67,9 @@ public class Process_Whitelist_Anomaly_Detector {
 			while(scanNewLogFile.hasNextLine()) {
 				String logdata = FetchLastLogPart(scanNewLogFile.nextLine());
 				if(!oldLogHashSet.contains(logdata)) {
-						anomalies.add(logdata);
-						writeNewLogToOldLogs(writerOut, logdata);
+						if(AlertAlreadySent(ProcessName,host,"Alert_WhiteList.log",600000))
+							anomalies.add(logdata);
+						//writeNewLogToOldLogs(writerOut, logdata);
 					}
 			}
 			writerOut.close();
